@@ -1,7 +1,7 @@
 @import 'utils/libs';
-@import 'utils/vars';
 @import 'utils/mixins';
 @import 'utils/fonts';
+@import 'utils/vars';
 @import 'utils/reset';
 
 html {
@@ -9,12 +9,15 @@ html {
   font-size: $mainFontSize;
   color: $mainFontColor;
   height: 100%;
+
   @media screen and (max-width: $desktopWidth) {
     font-size: 16px;
   }
+
   @media screen and (max-width: $tableWidth) {
     font-size: 15px;
   }
+
   @media screen and (max-width: $phoneWidth) {
     font-size: 14px;
   }
@@ -23,84 +26,209 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: $mainFont;
+  font-family: $mainFontOpen;
   font-size: $mainFontSize;
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-section,
-.section {
+  background-image: url('../img/hero_bg.jpg');
+  background-size: cover;
+  background-position: center center;
   position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $smDesktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $tableWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    padding: 20px 0;
+  z-index: 1;
+  height: 100%;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(47, 57, 60, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: -1;
   }
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  min-height: 100vh;
-  min-width: 100vh;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  box-sizing: border-box;
   width: 100%;
-  flex: 0 0 auto;
-  position: relative;
   margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: $tableWidth;
+}
+
+.header {
+  padding: 15px 0;
+
+  &__logo {
+    display: flex;
+    align-items: center;
   }
-  @media screen and (max-width: $tableWidth) {
-    max-width: $phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: $smPhoneWidth;
+
+  &__name {
+    font-family: 'logo';
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    color: #dfdfdf;
   }
 }
+
+.main {
+  height: calc(100% - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  padding: 30px 0;
+  width: 100%;
+  position: relative;
+
+  &__cont {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 46px;
+    font-style: italic;
+    font-weight: 600;
+    color: #dfdfdf;
+  }
+
+  &__description {
+    font-size: 20px;
+    font-style: italic;
+    color: #dfdfdf;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  &__btn {
+    margin-top: 40px;
+    max-width: 240px;
+    width: 100%;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    color: #595c5c;
+    background-color: #e9e9e9;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #bdbdbd;
+      transition: 0.3s ease-in-out;
+      color: #464c46;
+    }
+  }
+
+  &__popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    border-radius: 20px;
+    background-color: #313b39d1;
+    border: 0px solid #464c4c;
+    transition: 0.4s ease-in-out;
+    overflow: hidden;
+    height: 0;
+
+    &.show {
+      height: 314px;
+      border: 2px solid #464c4c;
+      padding: 40px;
+      transition: 0.4s ease-in-out;
+    }
+
+    &-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+
+      & span {
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: calc(50% - 1px);
+        left: calc(50% - 12.5px);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+        &:first-child {
+          transform: rotate(45deg);
+        }
+
+        &:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 300px;
+    height: 200px;
+    background: url('../img/workshop.jpg');
+    background-size: cover;
+    margin: 15px;
+    border-radius: 15px;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.talm {
+      background: url('../img/talmidim.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.resurs {
+      background: url('../img/resurs_group.jpg');
+      background-size: cover;
+      background-position: center;
+
+    }
+
+    &.home {
+      background: url('../img//home-groups.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    &-name {
+      text-align: center;
+      font-size: 29px;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: inset 2px 14px 32px 12px #000;
+      padding: 5px 20px;
+      border-radius: 18px;
+    }
+  }
+}
+
 
 // Modules:
 // example: @import "modules/my-module.scss";
+
+@import "modules/workshop.scss";

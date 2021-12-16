@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Template</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Webpack Template</title>
+</head>
+
+<body>
+  <header class="header">
     <div class="wrapper">
-      <div id="app">
-        <header></header>
-
-        <div class="content-wrapper">
-          <!-- expamle section (remove me) -->
-          <section id="promo" style="text-align:center;">
-            <div class="container">
-              <h1>Webpack Template</h1>
-            </div>
-
-            <a href="./workshop.html">link</a>
-          </section>
-
-          <!-- expamle vue component -->
-          <example-component />
-        </div>
-
-        <footer></footer>
+      <div class="header__logo">
+        <img src="../assets/img/logo.svg" alt="logo" class="header__icon">
+        <p class="header__name">Yahad</p>
       </div>
-      <!-- end #app wrapper -->
     </div>
-    <!-- end main wrapper -->
-  </body>
+  </header>
+  <main class="main js-close">
+    <section class="hero js-close">
+      <div class="wrapper">
+        <div class="hero__cont">
+          <h2 class="hero__title">
+            Хочеш знайти нових друзів?
+          </h2>
+          <p class="hero__description">
+            Реєструйся, не втрать можливість знайти нових друзів, навчитись тому що ти так давно хотів, змінити своє життя накраще, це платформа для тебе, ми чекали саме тебе!
+          </p>
+          <p class="hero__description">
+            Якщо ти чекав понеділка, то він настав!
+            Тисни кнопку нижчи і поринь в нове яскраве життя!
+          </p>
+          <button class="hero__btn js-choice-btn">Обрати</button>
+        </div>
+      </div>
+      <div class="hero__popup js-choice-popup">
+        <div class="hero__popup-close js-close">
+          <span></span>
+          <span></span>
+        </div>
+        <div class="hero__list">
+          <a href="" class="hero__item">
+            <p class="hero__item-name">воркшоп</p>
+          </a>
+          <a href="" class="hero__item talm">
+            <p class="hero__item-name">талмідім</p>
+          </a>
+          <a href="" class="hero__item resurs">
+            <p class="hero__item-name">группа підтримки</p>
+          </a>
+          <a href="" class="hero__item home">
+            <p class="hero__item-name">домашня группа</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
 </html>

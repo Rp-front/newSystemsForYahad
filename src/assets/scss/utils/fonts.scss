@@ -1,8 +1,26 @@
-/* Fonts:
-  https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
-  ========================================================================== */
-
 @import 'mixins';
+
+@font-face {
+  font-family: 'logo';
+  src: url('../fonts/Pacifico-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: 'opensans-bold';
+  src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'opensans-light';
+  src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: 'opensans-regular';
+  src: url('../fonts/OpenSans-Regular.ttf');
+}
+
 
 /*
   One of the ways:
