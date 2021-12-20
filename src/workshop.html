@@ -1,32 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webpack Template</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div id="app">
-        <header></header>
 
-        <div class="content-wrapper">
-          <!-- expamle section (remove me) -->
-          <section id="promo" style="text-align:center;">
-            <div class="container">
-              <h1>Workshop</h1>
-            </div>
-          </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="./assets/img/logo.svg">
+  <meta name="description" content="Тут ти зможеш змінити своє життя на краще">
+  <title>YAHAD</title>
+</head>
 
-          <!-- expamle vue component -->
-          <example-component />
+<body>
+  <div class="workshop-bg">
+    <header class="header">
+      <div class="wrapper">
+        <div class="header__logo">
+          <img src="../assets/img/logo.svg" alt="logo" class="header__icon">
+          <p class="header__name">Yahad</p>
         </div>
-
-        <footer></footer>
       </div>
-      <!-- end #app wrapper -->
+    </header>
+
+    <section class="workshop">
+      <div class="wrapper">
+        <div class="workshop__cont">
+          <h2 class="workshop__title">ВОРКШОПИ</h2>
+          <p class="workshop__description">
+            НАШІ ВОРКШОПИ – ЦЕ НЕВЕЛИКІ ГРУППИ ЗА СПІЛЬНИМИ ІНТЕРЕСАМИ.
+            ОБИРАЙТЕ ВОРКШОП ДО ДУШІ, РЕЄСТРУЙТЕСЯ ТА ПРИЄДНУЙТЕСЯ!
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section class="choise">
+    <div class="wrapper">
+
+      <div class="list">
+        <div class="list__item">
+          <div class="list__item-left">
+            <div class="list__img">
+
+            </div>
+            <h4 class="list__name">
+              Віктор Добролюбов
+            </h4>
+            <p class="list__phone">
+              <b>Звязок:</b> <a href="tel:+38 097-480-15-83" class="list__phone-link">097-480-15-83</a>
+            </p>
+            <p class="list__category">
+              <b>Категорія:</b> Чоловiки
+            </p>
+            <p class="list__years">
+              <b>Вiк:</b> 30-55
+            </p>
+            <button class="list__btn">
+              ПРИЄДНАТИСЬ
+            </button>
+          </div>
+          <div class="list__item-right">
+            <h4 class="list__title">
+              «Active men» (Активні чоловіки)
+            </h4>
+            <p class="list__description">
+              Втомився від монотонної роботи? Хочеш трішки розім’ятися, активно відпочити 
+              і знайти компанію любителів різних спортивних ігор? Тоді тобі до нас! Тебе 
+              чекає можливість познайомитися з новими людьми, цікаво поспілкуватися на вічні 
+              життєві теми, а головне провести час граючи в спортивні ігри 
+              (настільний теніс, волейбол, футбол, шахи).
+            </p>
+          </div>
+          <div class="list__item-btn js-open-item">
+            
+          </div>
+        </div>
+      </div>
+
     </div>
-    <!-- end main wrapper -->
-  </body>
+  </section>
+</body>
+
 </html>

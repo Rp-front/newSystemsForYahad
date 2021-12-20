@@ -1,0 +1,51 @@
+.animation {
+  position: relative;
+  width: 285px;
+  border-right: 2px solid rgba(255, 255, 255, .75);
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 10px;
+  display: none;
+
+  @media screen and (max-width: 767px) and (min-height: 450px) {
+    margin-left: 0;
+  }
+
+  &.show {
+      display: inline-block;
+  }
+
+  &_cont {
+    animation: typewriter 3s steps(44) 1s infinite normal both,
+      blinkTextCursor 500ms steps(44) infinite normal;
+  }
+}
+
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 285px;
+  }
+
+  70% {
+      width: 285px;
+  }
+
+  100% {
+      width: 0;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+}
