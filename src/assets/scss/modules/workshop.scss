@@ -6,7 +6,7 @@
   &::before {
     content: '';
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     background-color: rgba(47, 57, 60, 0.6);
     position: absolute;
     top: 0;
@@ -52,80 +52,116 @@
     flex-wrap: wrap;
 
     &__item {
-        width: 550px;
-        height: 270px;
+        width: 350px;
+        height: 250px;
         padding: 20px 15px;
         box-sizing: border-box;
-        border: 2px solid #977575;
         flex-shrink: 0;
         margin: 20px;
         border-radius: 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
         overflow: hidden;
-        box-shadow: 0px -21px 8px 0px rgba(151, 117, 117, 0.8) inset;
-        position: relative;
+        position: relative;    
+        background-size: cover;
+        background-position: center;
+        z-index: 1;
+        cursor: pointer;
 
-        &-left {
-            width: 200px;
-            flex-shrink: 0;
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(47, 57, 60, 0.6);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
             z-index: -1;
-        }
+        }    
 
-        &-right {
-            width: 300px;
-            flex-shrink: 0;
-            z-index: -1;
+        &_bud {
+            background: url('../img/leonid.jpg');
+            background-size: cover;
+            background-position: center;
         }
-    }
-
-    &__img {
-        width: 150px;
-        height: 150px;
-        display: block;
-        border-radius: 50%;
-        background-color: #b1b1b1;
     }
 
     &__name {
-        font-weight: bold;
-        margin-top: 10px;
-        font-size: 18px;
-    }
-
-    &__phone {
-        margin-top: 5px;
-        font-size: 16px;
-    }
-
-    &__category {
-        margin-top: 5px;
-        font-size: 16px;
-    }
-
-    &__years {
-        margin-top: 5px;
-        font-size: 16px;
-    }
-
-    &__title {
         font-size: 20px;
-        font-weight: bold;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: underline;
     }
 
     &__description {
-        font-size: 16px;
+        font-size: 15px;
+        color: #fff;
         margin-top: 15px;
+        overflow: hidden;
+        height: 150px;
+        display: block;
+        position: relative;
     }
 
-    &__btn {
-        padding: 10px 25px;
-        font-size: 16px;
-        font-weight: bold;
-        border-radius: 10px;
-        margin-top: 15px;
-        background-color: #977575;
-        color: #fff;
+    &__popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        max-width: 600px;
+        width: 100%;
+        border: 2px solid #fefefe;
+        border-radius: 25px;
+        transform: translate(-50%, -50%);
+        background-image: url('../img/workshop_bg.jpg');
+        background-size: cover;
+        padding: 25px;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(47, 57, 60, 0.6);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            z-index: -1;
+            border-radius: 25px;
+        }
+
+        &-img {
+            max-width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        &-desc {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 10px;
+
+            & > span {
+                font-weight: 600;
+                text-decoration: underline;
+            }
+        }
+
+        &-btn {
+            padding: 10px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-top: 15px;
+            background-color: #977575;
+            color: #fff;
+            cursor: pointer;
+        }
     }
 }

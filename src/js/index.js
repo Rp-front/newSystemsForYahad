@@ -50,3 +50,13 @@ function popup() {
 if (choiseCont) {
 	popup();
 }
+
+// workshop 
+let workshop = [...document.querySelectorAll('.js-list-workshop')];
+let workshopPopup = [...document.querySelectorAll('.js-list-popup')];
+
+for (let i = 0; i < workshop.length; i++) {
+	workshop[i].addEventListener('click', () => {
+		workshopPopup[i].classList.add('show');
+	})
+}
