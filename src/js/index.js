@@ -36,7 +36,7 @@ function popup() {
     choiseCont.classList.remove('show');
   }
 
-  function hideBanner(e) {
+  function hideBanner (e) {
     if (e.target.classList.contains('js-close')) {
       removeBanner();
     }
@@ -54,9 +54,20 @@ if (choiseCont) {
 // workshop 
 let workshop = [...document.querySelectorAll('.js-list-workshop')];
 let workshopPopup = [...document.querySelectorAll('.js-list-popup')];
+let workshopClose = document.querySelector('body');
 
 for (let i = 0; i < workshop.length; i++) {
 	workshop[i].addEventListener('click', () => {
 		workshopPopup[i].classList.add('show');
 	})
 }
+
+function whorkshopHide (e) {
+	if (e.target.classList.contains('js-workshop-close')) {
+		workshopPopup.forEach(item => {
+			item.classList.remove('show');
+		})
+	}
+}
+
+workshopClose.addEventListener('click', whorkshopHide);
