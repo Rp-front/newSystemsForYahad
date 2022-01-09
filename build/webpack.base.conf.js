@@ -37,7 +37,7 @@ module.exports = {
       publicPath: '/' - relative path for dist folder (js,css etc)
       publicPath: './' (dot before /) - absolute path for dist folder (js,css etc)
     */
-    publicPath: '/'
+    publicPath: './'
   },
   optimization: {
     splitChunks: {
@@ -74,7 +74,8 @@ module.exports = {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          publicPath: '../',
+          name: 'fonts/[name].[ext]'
         }
       },
       {
@@ -82,7 +83,8 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          publicPath: '../',
+          name: 'img/[name].[ext]'
         }
       },
       {
@@ -140,7 +142,7 @@ module.exports = {
     // Vue loader
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[contenthash].css`
+      filename:  `${PATHS.assets}css/[name].[contenthash].css`
     }),
     new CopyWebpackPlugin({
       patterns: [
