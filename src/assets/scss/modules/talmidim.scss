@@ -184,9 +184,9 @@
         border: 2px solid #fefefe;
         border-radius: 25px;
         transform: translate(-50%, -50%);
-        background-blend-mode: color-burn;
-        background: url('../img/workshop_bg.jpg'), rgba(47, 57, 60, 0.6);
+        background: url('../img/workshop_bg.jpg');
         background-size: cover;
+        box-shadow: inset 0 0 1000px 1000px rgba(47,57,60,0.8);
         padding: 25px;
         display: none;
         z-index: 100;

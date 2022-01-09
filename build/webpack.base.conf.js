@@ -74,8 +74,13 @@ module.exports = {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader',
         options: {
+          // prod
+
           publicPath: '../',
           name: 'fonts/[name].[ext]'
+
+          // loc
+          // name: '[name].[ext]'
         }
       },
       {
@@ -83,8 +88,14 @@ module.exports = {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
+          // prod
+
           publicPath: '../',
           name: 'img/[name].[ext]'
+
+          // loc
+          
+          // name: '[name].[ext]'
         }
       },
       {
