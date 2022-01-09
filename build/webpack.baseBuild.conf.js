@@ -37,7 +37,7 @@ module.exports = {
       publicPath: '/' - relative path for dist folder (js,css etc)
       publicPath: './' (dot before /) - absolute path for dist folder (js,css etc)
     */
-    publicPath: '/'
+    publicPath: './'
   },
   optimization: {
     splitChunks: {
@@ -76,11 +76,11 @@ module.exports = {
         options: {
           // prod
 
-          // publicPath: '../',
-          // name: 'fonts/[name].[ext]'
+          publicPath: '../',
+          name: 'fonts/[name].[ext]'
 
           // loc
-          name: '[name].[ext]'
+          // name: '[name].[ext]'
         }
       },
       {
@@ -90,12 +90,12 @@ module.exports = {
         options: {
           // prod
 
-          // publicPath: '../',
-          // name: 'img/[name].[ext]'
+          publicPath: '../',
+          name: 'img/[name].[ext]'
 
           // loc
           
-          name: '[name].[ext]'
+          // name: '[name].[ext]'
         }
       },
       {
