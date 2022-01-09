@@ -214,12 +214,12 @@
         border: 2px solid #fefefe;
         border-radius: 25px;
         transform: translate(-50%, -50%);
+        background-blend-mode: color-burn;
         background: url('../img/workshop_bg.jpg'), rgba(47, 57, 60, 0.6);
         background-size: cover;
         padding: 25px;
         display: none;
         z-index: 100;
-        background-blend-mode: color-burn;
         cursor: auto;
 
         @media screen and (max-width: 767px) {
