@@ -64,6 +64,12 @@ body {
 
 .header {
   padding: 10px 0;
+  max-width: 1200px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
 
   &__logo {
     display: flex;
@@ -80,7 +86,7 @@ body {
 }
 
 .main {
-  height: calc(100% - 80px);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,4 +368,3 @@ body {
 @import "modules/titleAnimation.scss";
 @import "modules/workshop.scss";
 @import "modules/talmidim.scss";
-

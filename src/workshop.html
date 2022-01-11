@@ -7,8 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" href="./assets/img/logo.svg">
   <meta name="description" content="Тут ти зможеш змінити своє життя на краще">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>YAHAD</title>
 </head>
+
 
 <body class="js-workshop-close">
   <div class="workshop-bg js-workshop-close">
@@ -65,7 +67,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 097-480-15-83</p>
             <p class="list__popup-desc"><span>Локація:</span> Европейськая 79 "Кафе Бульвар"</p>
             <p class="list__popup-desc"><span>Час:</span> Неділя 17:00</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Будівельний воркшоп" data-name='Леонід Добролюбов'>Записатись</button>
           </div>
         </li>
 
@@ -99,7 +101,7 @@
             <p class="list__popup-desc"><span>Зв’язок: </span> 067-126-52-48</p>
             <p class="list__popup-desc"><span>Локація: </span> Вул. Толстого 11</p>
             <p class="list__popup-desc"><span>Час:</span> Неділя 15:00</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="«Active men» (Активні чоловіки)" data-name='Віктор Добролюбов'>Записатись</button>
           </div>
         </li>
 
@@ -130,7 +132,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 093-735-53-85</p>
             <p class="list__popup-desc"><span>Локація:</span> Центр</p>
             <p class="list__popup-desc"><span>Час:</span> 18.30</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Секрети продуктивної комунікації" data-name='Юля-Голда Кармазина'>Записатись</button>
           </div>
         </li>
 
@@ -163,7 +165,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 067-345-89-83</p>
             <p class="list__popup-desc"><span>Локація:</span> Центр</p>
             <p class="list__popup-desc"><span>Час:</span> 18.30</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Світ кімнатних рослин" data-name='Олена Лежнюк'>Записатись</button>
           </div>
         </li>
 
@@ -191,7 +193,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 067-274-91-28, 093-471-13-48</p>
             <p class="list__popup-desc"><span>Локація:</span> ресторан "East West"</p>
             <p class="list__popup-desc"><span>Час:</span> П'ятниця 18.30 </p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Марафон для тіла і душі" data-name='Іра Добролюбова та Ксенія Носаль'>Записатись</button>
           </div>
         </li>
 
@@ -218,7 +220,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 063-212-57-26</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> П'ятниця 18.30</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="English tea time" data-name='Гаврилюк Зіна'>Записатись</button>
           </div>
         </li>
 
@@ -251,7 +253,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 093-145-98-38</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> П'ятниця 18.30</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Сучасна жінка" data-name='Тарасова Олена'>Записатись</button>
           </div>
         </li>
 
@@ -279,7 +281,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 063-831-73-37</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> П'ятниця 18.30</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="SMM" data-name='Армiне Арменакян'>Записатись</button>
           </div>
         </li>
 
@@ -313,7 +315,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 063-352-97-28</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> П'ятниця 19.00</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Музичний" data-name='Підвисоцький Руслан'>Записатись</button>
           </div>
         </li>
 
@@ -344,7 +346,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 063-289-22-63</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> Уточнюється</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="SOFT SKILLS" data-name='Підвисоцька Вікторія'>Записатись</button>
           </div>
         </li>
 
@@ -375,7 +377,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 093-137-22-04</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> Пятниця 18:00</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Не голодні ігри" data-name='Шкапцов Денис'>Записатись</button>
           </div>
         </li>
 
@@ -404,7 +406,7 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 093-738-46-72</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> Уточнюється</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="FUNDAY" data-name='Влад Зулінський'>Записатись</button>
           </div>
         </li>
 
@@ -438,12 +440,18 @@
             <p class="list__popup-desc"><span>Зв’язок:</span> 093-733-48-74</p>
             <p class="list__popup-desc"><span>Локація:</span> Локація уточнюється</p>
             <p class="list__popup-desc"><span>Час:</span> Пятниця 18.30</p>
-            <button class="list__popup-btn">Записатись</button>
+            <button class="list__popup-btn js-popup-btn" data-event="Подружній курс" data-name='Романенко Ірина та Сергій'>Записатись</button>
           </div>
         </li>
-
       </ul>
     </div>
+    <form action="/telegram" method="post" class="form js-form">
+        <input type="text" name="workshop" value="null" hidden class="js-form-name-workshop">
+        <input type="text" name="nameTeacher" value="null" hidden class="js-form-name-teacher">
+        <input type="text" name="name" placeholder="Ім'я" class="form__input" required>
+        <input type="tel" name="phone" placeholder="телефон" class="form__input" required>
+        <button type="submit" class="form__btn btn js-form-btn">Записатись</button>
+    </form>
   </section>
 </body>
 

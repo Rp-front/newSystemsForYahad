@@ -16,286 +16,327 @@
   }
 
   @media screen and (max-width: 1023px) {
-      clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   }
 
   @media screen and (max-width: 1023px) {
-    clip-path: polygon(0 0,100% 0,100% 95%,0 100%);
-  }    
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
 }
 
 .workshop {
-    padding: 120px 0;
+  padding: 120px 0;
+
+  @media screen and (max-width: 1023px) {
+    padding: 30px 0 60px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 10px 0 40px;
+  }
+
+  &__cont {
+    max-width: 650px;
+    width: 100%;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff;
 
     @media screen and (max-width: 1023px) {
-        padding: 30px 0 60px;
+      font-size: 30px;
     }
 
     @media screen and (max-width: 767px) {
-        padding: 10px 0 40px;
+      font-size: 27px;
+    }
+  }
+
+  &__description {
+    margin-top: 50px;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 500;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 20px;
+      margin-top: 30px;
     }
 
-    &__cont {
-        max-width: 650px;
-        width: 100%;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      margin-top: 22px;
     }
-
-    &__title {
-        color: #fff;
-        font-size: 50px;
-        font-weight: bold;
-        letter-spacing: 3px;
-        padding-bottom: 10px;
-        border-bottom: 3px solid #fff;
-
-        @media screen and (max-width: 1023px) {
-            font-size: 30px;
-        }
-
-        @media screen and (max-width: 767px) {
-            font-size: 27px;
-        }
-    }
-
-    &__description {
-        margin-top: 50px;
-        font-size: 30px;
-        color: #fff;
-        font-weight: 500;
-
-        @media screen and (max-width: 1023px) {
-            font-size: 20px;
-            margin-top: 30px;
-        }
-
-        @media screen and (max-width: 767px) {
-            font-size: 16px;
-            margin-top: 22px;
-        }
-    }
+  }
 }
 
 .choise {
-    padding: 80px 0;
+  padding: 80px 0;
 
-    @media screen and (max-width: 1023px) {
-        padding: 50px 0;
-    }
+  @media screen and (max-width: 1023px) {
+    padding: 50px 0;
+  }
 }
 
 .list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &__item {
+    width: 350px;
+    height: 250px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+
+    @media screen and (max-width: 1023px) {
+      width: 300px;
+      margin: 10px;
+    }
+
+    &_bud {
+      background: url('../img/leonid.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_active {
+      background: url('../img/viktor.jpg'), rgba(47, 57, 60, 0.4);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_com {
+      background: url('../img/golda.jpg'), rgba(47, 57, 60, 0.2);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_flow {
+      background: url('../img/elena.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_marafon {
+      background: url('../img/irina.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_eng {
+      background: url('../img/zina.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_woman {
+      background: url('../img/lena.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_smm {
+      background: url('../img/armi.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_muz {
+      background: url('../img/ruslan.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_soft {
+      background: url('../img/vika.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_game {
+      background: url('../img/denis.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_vlad {
+      background: url('../img/vlad.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+
+    &_fam {
+      background: url('../img/irina-rom.jpg'), rgba(47, 57, 60, 0.6);
+      background-size: cover, 100%;
+      background-position: center;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  &__description {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 15px;
+    overflow: hidden;
+    height: 150px;
+    display: block;
+    position: relative;
+  }
+
+  &__popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 600px;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    border: 2px solid #fefefe;
+    border-radius: 25px;
+    transform: translate(-50%, -50%);
+    background: url('../img/workshop_bg.jpg');
+    background-size: cover;
+    box-shadow: inset 0 0 1000px 1000px rgba(47, 57, 60, 0.8);
+    padding: 25px;
+    display: none;
+    z-index: 100;
+    cursor: auto;
 
-    &__item {
-        width: 350px;
-        height: 250px;
-        padding: 20px 15px;
-        box-sizing: border-box;
-        flex-shrink: 0;
-        margin: 20px;
-        border-radius: 30px;
-        overflow: hidden;
-        position: relative;    
-        background-size: cover;
-        background-position: center;
-        cursor: pointer;
-        background-blend-mode: color-burn;
-
-        @media screen and (max-width: 1023px) {
-            width: 300px;
-            margin: 10px;
-        }
-
-        &_bud {
-            background: url('../img/leonid.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_active {
-            background: url('../img/viktor.jpg'), rgba(47, 57, 60, 0.4);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_com {
-            background: url('../img/golda.jpg'), rgba(47, 57, 60, 0.2);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_flow {
-            background: url('../img/elena.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_marafon {
-            background: url('../img/irina.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_eng {
-            background: url('../img/zina.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_woman {
-            background: url('../img/lena.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_smm {
-            background: url('../img/armi.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_muz {
-            background: url('../img/ruslan.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_soft {
-            background: url('../img/vika.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_game {
-            background: url('../img/denis.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_vlad {
-            background: url('../img/vlad.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
-
-        &_fam {
-            background: url('../img/irina-rom.jpg'), rgba(47, 57, 60, 0.6);
-            background-size: cover, 100%;
-            background-position: center;
-        }
+    @media screen and (max-width: 767px) {
+      height: 100%;
+      overflow: scroll;
+      top: 0;
+      transform: translate(-50%, 0);
+      padding: 25px 10px;
     }
 
-    &__name {
-        font-size: 20px;
-        font-weight: 500;
-        color: #fff;
-        text-decoration: underline;
+    &.show {
+      display: block;
     }
 
-    &__description {
-        font-size: 15px;
-        color: #fff;
-        margin-top: 15px;
-        overflow: hidden;
-        height: 150px;
-        display: block;
-        position: relative;
-    }
+    &-close {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      align-items: center;
 
-    &__popup {
-        position: fixed;
+      &::before,
+      &::after {
+        content: '';
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+        transform: rotate(45deg);
+        position: absolute;
+        left: calc(50% - 15px);
         top: 50%;
-        left: 50%;
-        max-width: 600px;
-        width: 100%;
-        border: 2px solid #fefefe;
-        border-radius: 25px;
-        transform: translate(-50%, -50%);
-        background: url('../img/workshop_bg.jpg');
-        background-size: cover;
-        box-shadow: inset 0 0 1000px 1000px rgba(47,57,60,0.8);
-        padding: 25px;
-        display: none;
-        z-index: 100;
-        cursor: auto;
+      }
 
-        @media screen and (max-width: 767px) {
-            height: 100%;
-            overflow: scroll;
-            top: 0;
-            transform: translate(-50%, 0);
-            padding: 25px 10px;
-        }
-
-        &.show {
-            display: block;
-        }
-
-        &-close {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-            align-items: center;
-
-            &::before,
-            &::after {
-                content: '';
-                width: 30px;
-                height: 2px;
-                background-color: #fff;
-                transform: rotate(45deg);
-                position: absolute;
-                left: calc(50% - 15px);
-                top: 50%;
-            }
-
-            &::after {
-                transform: rotate(-45deg);
-            }
-        }
-
-        &-img {
-            max-width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-
-        &-desc {
-            color: #fff;
-            font-size: 18px;
-            font-weight: 500;
-            margin-top: 10px;
-
-            & > span {
-                font-weight: 600;
-                text-decoration: underline;
-            }
-
-            @media screen and (max-width: 767px) {
-                font-size: 16px;
-            }
-        }
-
-        &-btn {
-            display: flex;
-            padding: 10px 25px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 10px;
-            margin: 15px auto 0;
-            background-color: #977575;
-            color: #fff;
-            cursor: pointer;
-        }
+      &::after {
+        transform: rotate(-45deg);
+      }
     }
+
+    &-img {
+      max-width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    &-desc {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 10px;
+
+      &>span {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+
+    &-btn {
+      display: flex;
+      padding: 10px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      margin: 15px auto 0;
+      background-color: #977575;
+      color: #fff;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.form {
+  width: 400px;
+  background-color: #53544f;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+
+  &.show {
+      display: flex;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    border: 2px solid #897a7a;
+    margin-bottom: 25px;
+  }
+
+  &__btn {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: #977575;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
 }
