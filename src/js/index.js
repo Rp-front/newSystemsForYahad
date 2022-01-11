@@ -96,74 +96,25 @@ reg.forEach(btn => {
 })
 
 formBtn.addEventListener('click', () => {
-	form.classList.remove('show');
+	let newPeopleName = document.querySelector('.js-form-name-people');
+	let newPeoplePhone = document.querySelector('.js-form-phone');
+	let messege = "--Тема:" + workshopName.value + "--Ведущий:" + teacher.value + "--Имя:" + newPeopleName.value + "--Телефон:" + newPeoplePhone.value;
+	
+
+	const token = '5030963119:AAEmBBO9py9Lc7gT-KiKTMS4jLK3ff-bi4w';
+	let url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id=-728873853&text=';
+	let xhttp = new XMLHttpRequest();
+
+	if (newPeopleName.value === '' || newPeoplePhone.value === '') {
+		newPeopleName.value === '' ? newPeopleName.classList.add('error') : '';
+		newPeoplePhone.value === '' ? newPeoplePhone.classList.add('error') : '';
+	} else {
+		xhttp.open("GET", url + messege, true)
+		xhttp.send();
+		form.classList.remove('show');
+	}
 })
 
 // submit form 
 
-$('.js-form').on('submit', function (event) {
-
-    event.stopPropagation();
-    event.preventDefault();
-
-    let form = this,
-        submit = $('.submit', form),
-        data = new FormData(),
-        files = $('input[type=file]')
-
-
-    $('.submit', form).val('Отправка...');
-    $('input, textarea', form).attr('disabled','');
-
-
-    data.append( 'workshop', 	$('[name="workshop"]', form).val() );
-    data.append( 'nameTeacher', $('[name="nameTeacher"]', form).val() );
-    data.append( 'name', 		$('[name="name"]', form).val() );
-    data.append( 'phone', 		$('[name="phone"]', form).val() );
-   
-
-    files.each(function (key, file) {
-        let cont = file.files;
-        if ( cont ) {
-            $.each( cont, function( key, value ) {
-                data.append( key, value );
-            });
-        }
-    });
-    
-    $.ajax({
-        url: 'ajax.php',
-        type: 'POST',
-        data: data,
-        cache: false,
-        dataType: 'json',
-        processData: false,
-        contentType: false,
-        xhr: function() {
-            let myXhr = $.ajaxSettings.xhr();
-
-            if ( myXhr.upload ) {
-                myXhr.upload.addEventListener( 'progress', function(e) {
-                    if ( e.lengthComputable ) {
-                        let percentage = ( e.loaded / e.total ) * 100;
-                            percentage = percentage.toFixed(0);
-                        $('.submit', form)
-                            .html( percentage + '%' );
-                    }
-                }, false );
-            }
-
-            return myXhr;
-        },
-        error: function( jqXHR, textStatus ) {
-            // Тут выводим ошибку
-        },
-        complete: function() {
-            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
-            console.log('Complete')
-            form.reset() 
-        }
-    });
-
-    return false;
-});
+// https://api.telegram.org/bot5030963119:AAEmBBO9py9Lc7gT-KiKTMS4jLK3ff-bi4w/sendMessage?chat_id=-728873853&text=test

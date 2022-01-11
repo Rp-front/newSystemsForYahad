@@ -7,7 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" href="./assets/img/logo.svg">
   <meta name="description" content="Тут ти зможеш змінити своє життя на краще">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <title>YAHAD</title>
 </head>
 
@@ -413,10 +412,10 @@
         <li class="list__item list__item_fam js-list-workshop">
           <h4 class="list__name">Подружній курс</h4>
           <p class="list__description">
-            Коли ми одрeжуємося, ми щиро бажаємо побудувати щасливу сім'ю, 
-            прожити життя в коханні, гармонії, розумінні. Але чи знаємо ми, як 
-            досягти цієї важливої мети? Щоб стати справжнім чоловіком чи дружиною 
-            потрібні знання, наполегливість та практика. Час на практику нам дає життя, 
+            Коли ми одрeжуємося, ми щиро бажаємо побудувати щасливу сім'ю,
+            прожити життя в коханні, гармонії, розумінні. Але чи знаємо ми, як
+            досягти цієї важливої мети? Щоб стати справжнім чоловіком чи дружиною
+            потрібні знання, наполегливість та практика. Час на практику нам дає життя,
             наполегливість залежить повністю від нас, а щоб отримати знання - приходьте на Подружній курс!!!
           </p>
 
@@ -428,12 +427,12 @@
             <p class="list__popup-desc"><span>Назва:</span> Подружній курс</p>
             <p class="list__popup-desc"><span>Ведучий:</span> Романенко Ірина та Сергій</p>
             <p class="list__popup-desc"><span>Опис:</span>
-                Коли ми одрeжуємося, ми щиро бажаємо побудувати щасливу сім'ю, 
-                прожити життя в коханні, гармонії, розумінні. Але чи знаємо ми, 
-                як досягти цієї важливої мети? Щоб стати справжнім чоловіком чи 
-                дружиною потрібні знання, наполегливість та практика. Час на практику 
-                нам дає життя, наполегливість залежить повністю від нас, 
-                а щоб отримати знання - приходьте на Подружній курс!!!
+              Коли ми одрeжуємося, ми щиро бажаємо побудувати щасливу сім'ю,
+              прожити життя в коханні, гармонії, розумінні. Але чи знаємо ми,
+              як досягти цієї важливої мети? Щоб стати справжнім чоловіком чи
+              дружиною потрібні знання, наполегливість та практика. Час на практику
+              нам дає життя, наполегливість залежить повністю від нас,
+              а щоб отримати знання - приходьте на Подружній курс!!!
             </p>
             <p class="list__popup-desc"><span>Вiк:</span> 25-50</p>
             <p class="list__popup-desc"><span>Категорія:</span> Сімейний</p>
@@ -445,13 +444,17 @@
         </li>
       </ul>
     </div>
-    <form action="/telegram" method="post" class="form js-form">
-        <input type="text" name="workshop" value="null" hidden class="js-form-name-workshop">
-        <input type="text" name="nameTeacher" value="null" hidden class="js-form-name-teacher">
-        <input type="text" name="name" placeholder="Ім'я" class="form__input" required>
-        <input type="tel" name="phone" placeholder="телефон" class="form__input" required>
-        <button type="submit" class="form__btn btn js-form-btn">Записатись</button>
-    </form>
+    <div class="form js-form">
+      <input type="text" name="workshop" value="null" hidden class="js-form-name-workshop">
+      <input type="text" name="nameTeacher" value="null" hidden class="js-form-name-teacher">
+
+      <input type="text" name="name" placeholder="Ім'я" class="form__input js-form-name-people" required>
+
+
+      <input type="tel" name="phone" placeholder="телефон" class="form__input js-form-phone" required>
+
+      <button class="form__btn btn js-form-btn">Записатись</button>
+    </div>
   </section>
 </body>
 
